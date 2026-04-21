@@ -1,0 +1,152 @@
+/* VARIÁVEIS DE COR - Fácil de alterar no futuro */
+:root {
+    --bg-color: #0d0d12;
+    --card-bg: #1a1a24;
+    --accent-color: #08c1c7; /* Ciano Neon */
+    --secondary-accent: #7000ff; /* Roxo Neon */
+    --text-main: #e0e0e0;
+    --text-dim: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .tag {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* SIDEBAR - ESTILO REDE SOCIAL */
+.sidebar {
+    flex: 1;
+    position: sticky;
+    top: 40px;
+    height: fit-content;
+}
+
+.profile-card, .extra-widget {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid var(--accent-color);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* LINKS SOCIAIS */
+.social-links a {
+    display: block;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-accent);
+    text-shadow: 0 0 10px var(--secondary-accent);
+}
+
+/* FEED DE POSTS */
+.feed {
+    flex: 2;
+}
+
+.post {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--secondary-accent);
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.date {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    float: right;
+}
+
+/* BOTÕES ESTILO GAMER */
+button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* BARRA DE XP (FUTURA FUNCIONALIDADE) */
+.xp-bar {
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.xp-fill {
+    width: 65%; /* Progresso de exemplo */
+    height: 100%;
+    background: linear-gradient(to right, var(--secondary-accent), var(--accent-color));
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+    }
+}

@@ -1,0 +1,1 @@
+Para o meu blog eu usei apenas o GEMINI
