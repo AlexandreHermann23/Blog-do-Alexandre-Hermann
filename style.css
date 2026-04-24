@@ -17,12 +17,12 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lora', sans-serif;
     line-height: 1.6;
 }
 
 h1, h2, h3, .tag {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lora', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
